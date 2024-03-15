@@ -9,6 +9,7 @@ import { MANAGE_CHANNELS_PATH } from '../../../CreateTrigger/utils/constants';
 import { NOTIFICATIONS_LEARN_MORE_HREF } from '../../utils/constants';
 
 const noNotificationsTitle = 'Destinations will become channels in Notifications';
+const manageChannelsUrl = httpClient.basePath.prepend(MANAGE_CHANNELS_PATH);
 const noNotificationsText = (
   <EuiText>
     Destinations will be deprecated going forward. Install the Notifications plugin for a new
@@ -41,7 +42,7 @@ const hasNotificationsText = (
   </EuiText>
 );
 const hasNotificationsButton = (
-  <EuiButton fill href={MANAGE_CHANNELS_PATH}>
+  <EuiButton fill href={manageChannelsUrl}>
     View in Notifications
   </EuiButton>
 );

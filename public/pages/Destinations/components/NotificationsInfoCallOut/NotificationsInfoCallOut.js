@@ -9,6 +9,7 @@ import { MANAGE_CHANNELS_PATH } from '../../../CreateTrigger/utils/constants';
 import { NOTIFICATIONS_LEARN_MORE_HREF } from '../../utils/constants';
 
 const noNotificationsTitle = 'Unable to send notifications. Notifications plugin is required.';
+const manageChannelsUrl = httpClient.basePath.prepend(MANAGE_CHANNELS_PATH);
 const noNotificationsBodyText = (
   <>
     <p>
@@ -43,7 +44,7 @@ const hasNotificationsBodyText = (
   </p>
 );
 const hasNotificationsButton = (
-  <EuiButton href={MANAGE_CHANNELS_PATH}>View in Notifications</EuiButton>
+  <EuiButton href={manageChannelsUrl}>View in Notifications</EuiButton>
 );
 
 const NotificationsInfoCallOut = ({ hasNotificationPlugin }) => {
